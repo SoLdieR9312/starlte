@@ -52,6 +52,11 @@ Module.symvers
 /vmlinuz
 /System.map
 /Module.markers
+/build_kernel
+/output
+/scripts/dtbTool
+build_kernel.sh
+env_setup.sh
 
 #
 # Debian directory (make deb-pkg)
