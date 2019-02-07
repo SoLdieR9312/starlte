@@ -53,9 +53,8 @@ Module.symvers
 /System.map
 /Module.markers
 /build_kernel
-/output
-/scripts/dtbTool
-build_kernel.sh
+build.sh
+build_kernel_full.sh
 env_setup.sh
 
 #
