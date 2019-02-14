@@ -56,6 +56,7 @@ Module.symvers
 build.sh
 build_kernel_full.sh
 env_setup.sh
+/scripts/dtbtool_exynos/dtbtool
 
 #
 # Debian directory (make deb-pkg)
