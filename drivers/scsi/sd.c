@@ -1600,6 +1600,7 @@ static int sd_compat_ioctl(struct block_device *bdev, fmode_t mode,
 			(mode & FMODE_NDELAY) != 0);
 	if (error)
 		return error;
+
 	/*
 	 * Let the static ioctl translation table take care of it.
 	 */
@@ -3206,7 +3207,7 @@ static void sd_probe_async(void *data, async_cookie_t cookie)
 			sdp->host->ufs_system_start = 0;
 			sdp->host->ufs_system_end = 0;
 			sdp->host->ufs_sys_log_en = false;
-	
+
 			for (i = 1; i < 30 ; i++) {
 				if (!gd->part_tbl)
 					break;
@@ -3315,7 +3316,6 @@ static int sd_probe(struct device *dev)
 	sdkp->driver = &sd_template;
 	sdkp->disk = gd;
 	sdkp->index = index;
-
 	atomic_set(&sdkp->openers, 0);
 	atomic_set(&sdkp->device->ioerr_cnt, 0);
 
@@ -3733,4 +3733,3 @@ static void sd_print_result(const struct scsi_disk *sdkp, const char *msg,
 			  "%s: Result: hostbyte=0x%02x driverbyte=0x%02x\n",
 			  msg, host_byte(result), driver_byte(result));
 }
-
